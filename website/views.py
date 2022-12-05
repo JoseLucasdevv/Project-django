@@ -19,5 +19,5 @@ def create(request):
     if form.is_valid():
         print("Funcionou")
         form.save()
-        return redirect("form")
+        return redirect("home")
     return render(request, "form.html")
