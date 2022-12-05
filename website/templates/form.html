@@ -1,0 +1,82 @@
+{% load static %}
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="{% static 'style.css'%}" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,600;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sign In</h1>
+      <form action="/create/" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-control">
+          <input class="input" type="text" required name="nome" />
+          <label>Primeiro Nome</label>
+          <div class="content_img">
+            <img class="img" src="#" alt="" />
+          </div>
+        </div>
+        <div class="form-control">
+          <input class="input" type="text" name="sobrenome" required />
+          <label>Sobrenome</label>
+          <div class="content_img">
+            <img class="img" src="#" alt="" />
+          </div>
+        </div>
+        <div class="form-control">
+          <input
+            class="input"
+            type="text"
+            required
+            name="cpf"
+            \
+            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+            \
+          />
+          <label>CPF</label>
+          <div class="content_img">
+            <img class="img" src="#" alt="" />
+          </div>
+        </div>
+        <div class="form-control">
+          <input
+            class="input"
+            type="number"
+            required
+            value="0"
+            name="tempo_de_servico"
+          />
+          <label>Tempo de Serviço</label>
+          <div class="content_img">
+            <img class="img" src="#" alt="" />
+          </div>
+        </div>
+        <div class="form-control">
+          <input
+            class="input"
+            type="number"
+            required
+            step="any"
+            name="remuneracao"
+          />
+          <label>Remuneração</label>
+          <div class="content_img">
+            <img class="img" src="#" alt="" />
+          </div>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+        <p class="text">Não tem uma conta ?</p>
+        <a href="#">Criar Conta</a>
+      </form>
+    </div>
+    <script src="{% static 'main.js'%}"></script>
+  </body>
+</html>

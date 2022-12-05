@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "poppins", sans-serif;
+  background-image: url("pexels-jakub-novacek-924824.jpg");
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.container {
+  background-color: #393e467d;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.container a {
+  text-decoration: none;
+  color: rgb(160, 211, 228);
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background-color: rgb(11, 180, 237);
+  padding: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+}
+.btn:focus {
+  outline: 0;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.text {
+  margin-top: 30px;
+}
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+.content-img img {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+}
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: lightblue;
+  transform: translateY(-30px);
+}
+.btn:hover {
+  background-color: rgb(37, 113, 138);
+  transition: 0.5ms, 1s;
+}
+
+
+img {
+  width: 20px;
+  height: 20px;
+}
+.container-text{
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (mix-width: 1200px) {
+ .text{
+  text-align: center;
+ }
+}
